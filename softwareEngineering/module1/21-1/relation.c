@@ -1,0 +1,15 @@
+int main()
+{
+    int a = 6;
+    int b = 3;
+    int c = 6;
+    
+    printf("\n %d",a<b);
+    printf("\n %d",a>b);
+    printf("\n %d",a>=c);
+    printf("\n %d",a<=c);
+    printf("\n %d",a==b);
+    printf("\n %d",a!=b);
+    
+    return 0;
+}
