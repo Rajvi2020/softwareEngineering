@@ -4,7 +4,7 @@ int main()
 {
     int num, month;
 
-    // Check even or odd
+    // Check even or odd using simple if-else
     printf("Enter a number: ");
     scanf("%d", &num);
 
@@ -12,6 +12,25 @@ int main()
         printf("The number is Even\n");
     else
         printf("The number is Odd\n");
+
+    // Nested if example
+    if (num > 0)
+    {
+        printf("The number is Positive\n");
+
+        if (num % 2 == 0)
+            printf("It is also Even (Nested If)\n");
+        else
+            printf("It is also Odd (Nested If)\n");
+    }
+    else if (num < 0)
+    {
+        printf("The number is Negative\n");
+    }
+    else
+    {
+        printf("The number is Zero\n");
+    }
 
     // Display month name using switch
     printf("\nEnter month number (1-12): ");
