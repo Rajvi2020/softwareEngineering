@@ -6,9 +6,18 @@ int main() {
 
     switch(marks / 10) {
         case 10: // 100
-        case 9:  // 90
+          // 90
             printf("Grade: A\n");
             break;
+        case 9:
+        if(marks>90){
+            printf("A grade");
+        }
+        else{
+            printf("B grade");
+            
+        }
+        break;
         case 8:  // 80-89
         case 7:  // 70-79
             if (marks > 75)      // split 76-79 → B, 70-75 → C
@@ -18,8 +27,13 @@ int main() {
             break;
         case 6:  // 60-69
         case 5:  // 50-59
-            printf("Grade: C\n");
-            break;
+        if(marks==50)
+        printf("D grade");
+        else{
+            printf("C grade");
+        }
+        break;
+            
         default: // 0-49
             printf("Grade: D\n");
             break;
