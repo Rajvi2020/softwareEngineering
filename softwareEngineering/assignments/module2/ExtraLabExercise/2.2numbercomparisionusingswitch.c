@@ -1,45 +1,41 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<conio.h>
 
-int main() {
-    int a, b, c;
-    int largest, smallest;
 
-    printf("Enter three numbers: ");
-    scanf("%d %d %d", &a, &b, &c);
-
-    // Switch statements hamesha yaha function body (main) ma lakhva
-    switch(a >= b) {
-        case 0:
-            switch(b >= c) {
-                case 0: largest = c; break;
-                case 1: largest = b; break;
-            }
+int main()
+{
+   
+       int a=5,b=2,c=3,num=0;
+        
+        if(a>b && a>c)
+        {
+           num=1; 
+        }
+        else if(b>c && b>a)
+        {
+            num=2;
+        }
+        else
+        {
+            num=3;   
+        }
+        
+        switch(num)
+        {
+            case 1: printf("a is bigger");
             break;
-        case 1:
-            switch(a >= c) {
-                case 0: largest = c; break;
-                case 1: largest = a; break;
-            }
+            
+            case 2: printf("b is bigger");
             break;
-    }
-
-    switch(a <= b) {
-        case 0:
-            switch(b <= c) {
-                case 0: smallest = c; break;
-                case 1: smallest = b; break;
-            }
+            
+            case 3: printf("c is bigger");
             break;
-        case 1:
-            switch(a <= c) {
-                case 0: smallest = c; break;
-                case 1: smallest = a; break;
-            }
+            
+            default : printf("Invalid");
             break;
-    }
-
-    printf("Largest: %d\n", largest);
-    printf("Smallest: %d\n", smallest);
-
+        }
+    
+  
+  
     return 0;
 }
