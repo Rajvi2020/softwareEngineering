@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+
+void swap(int *x, int *y)
+{
+    printf("\n Before Swapping value in function X is : %d ",*x);
+    printf("\n Before Swapping value in function Y is : %d ",*y);
+    
+    int temp;
+
+     temp = *x; 
+     *x = *y;    
+     *y = temp; 
+    
+    printf("\n After Swapping value in function X is : %d ",*x);
+    printf("\n After Swapping value in function Y is : %d ",*y);
+}
+ 
+int main()
+{
+    int x = 6;
+    int y = 2;
+    
+    printf("\n Before Swapping value X is : %d ",x);
+    printf("\n Before Swapping value Y is : %d ",y);
+    
+    swap(&x , &y);
+    
+    printf("\n After Swapping value X is : %d ",x);
+    printf("\n After Swapping value Y is : %d ",y);
+    
+  
+    
+ 
+    return 0;
+}
