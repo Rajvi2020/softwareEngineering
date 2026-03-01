@@ -5,13 +5,13 @@
 int main()
 {
    
-       int a=5,b=2,c=3,num=0;
+       int a=5,b=5,c=3,num=0;
         
-        if(a>b && a>c)
+        if(a>=b && a>=c)
         {
            num=1; 
         }
-        else if(b>c && b>a)
+        else if(b>=c && b>=a)
         {
             num=2;
         }
@@ -29,6 +29,33 @@ int main()
             break;
             
             case 3: printf("c is bigger");
+            break;
+            
+            default : printf("Invalid");
+            break;
+        }
+        if(a<=b && a<=c)
+        {
+           num=1; 
+        }
+        else if(b<=c && b<=a)
+        {
+            num=2;
+        }
+        else
+        {
+            num=3;   
+        }
+        
+        switch(num)
+        {
+            case 1: printf("a is smaller ");
+            break;
+            
+            case 2: printf("b is smaller");
+            break;
+            
+            case 3: printf("c is smaller");
             break;
             
             default : printf("Invalid");

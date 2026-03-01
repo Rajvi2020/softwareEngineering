@@ -9,10 +9,12 @@ int main()
   char *ptr2;
   char *ptr3;
   ptr = &a;
-  ptr = &b;
-  ptr = &c;
+  ptr2 = &b;
+  ptr3 = &c;
   printf("%p\n", ptr);
   printf("%p\n", ptr3);
   printf("%p\n", ptr2);
+
+   printf("%c\n", *ptr);
   return 0;
 }

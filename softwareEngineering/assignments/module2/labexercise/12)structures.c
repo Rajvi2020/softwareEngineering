@@ -5,11 +5,11 @@ struct Student
     char name[50];
     int roll;
     float marks;
-};
+}s[3];
 
 int main()
 {
-    struct Student s[3];
+    //struct Student s[3];
     int i;
 
     for(i = 0; i < 3; i++)
