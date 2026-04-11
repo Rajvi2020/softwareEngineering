@@ -1,0 +1,86 @@
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50),
+    marks INT
+);
+
+
+
+
+-> Add a new column email to the table
+alter table students add email varchar(50);
+
+-> Change the datatype of marks to decimal
+alter table students modify marks decimal;
+
+-> Rename column name to student_name
+alter table students change name  student_name varchar(50)
+
+-> Remove the column age
+alter table students drop age;
+
+-> Rename the table Students to Student_Details
+rename table students to student_details;
+
+-> Delete the entire table
+drop table student_details
+
+-> Insert 5 student records into the table
+insert into students (student_id,name,age,course,marks) values (1,'rajvi',20,'python',100),
+(2,'kishan',25,'java',95),
+(3,'kiran',26,'design',89),
+(4,'kiran',26,'design',89),
+(5,'kiran',26,'design',89)
+
+-> Update marks of a student whose student_id = 2
+UPDATE students set marks=65 WHERE student_id=2
+
+
+-> Change course of a student named “Amit”
+update students set course='graphich' where name='rajvi';
+
+-> Increase marks of all students by 5
+UPDATE students set marks=marks+5;
+
+-> Delete a student whose student_id = 4
+-> Delete all records from the table
+
+
+-> Display all records from the table
+SELECT * FROM `students`
+ 
+-> Show only name and marks columns
+select name,marks from students
+
+-> Find students with marks greater than 80
+select * from students where marks>80;
+
+-> Display students belonging to “BCA” course
+select * from students where course='BCA'
+
+-> Sort students by marks in descending order
+select * from students order by marks desc;
+
+
+-> Count total number of students
+select count(*) from students
+
+
+-> Find average marks of students
+select avg(marks) from students
+
+
+-> Find highest and lowest marks
+select max(marks),min(marks) from students;
+
+
+-> Display students whose name starts with ‘A’
+
+
+-> Show distinct courses available
+
+
+
+
