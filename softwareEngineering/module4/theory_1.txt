@@ -1,0 +1,50 @@
+WAMP
+W => Windows
+A => Apache
+M => Mysql
+P => phpmyadmin
+
+LAMP
+L => Linux
+A => Apache
+M => Mysql
+P => phpmyadmin
+
+MAMP
+M => Mac
+A => Apache
+M => Mysql
+P => phpmyadmin
+
+XAMPP
+X => Cross Platform
+A => Apache
+M => Mysql
+P => perl
+P => phpmyadmin
+DELIMITER//
+ CREATE PROCEDURE selectproc(INOUT myid int)
+ BEGIN 
+ SELECT  * FROM customers WHERE id=myid;
+ END//
+ 
+DELIMITER ;
+DELIMITER //
+ CREATE PROCEDURE updateproc(INOUT myid int)
+ BEGIN 
+ update  customers set lastname='xyz' WHERE id=myid;
+ END//
+ 
+DELIMITER ;
+SET @p0='2'; CALL `updateproc`(@p0); SELECT @p0 AS `myid`;
+DELIMITER //
+ CREATE PROCEDURE deleteproc(INOUT myid int)
+ BEGIN 
+ DELETE FROM customers WHERE id=myid;
+ END//
+ 
+DELIMITER ;
+
+
+
+
