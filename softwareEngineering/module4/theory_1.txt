@@ -44,6 +44,8 @@ DELIMITER //
  END//
  
 DELIMITER ;
+ selectproc
+
 
 
 
